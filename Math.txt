@@ -1,0 +1,116 @@
+Linux® is an open source operating system (OS). An operating system is the software that directly manages files and a system’s hardware and resources, like CPU, memory, and storage. The OS sits between applications and hardware and makes the connections between all of your software and the physical resources that do the work
+
+1)	Ls     list files and directories.
+2)	ls-l     list files and directories with long format.
+3)	ls-lt     this is used to list out all the file/directories from latest to old.
+4)	ls-lrt    this is used to list out all the file/directories from old to latest.
+5)	ls –a    this is used to list all the files with hidden files in a directory.
+6)	ls -l*    this is used to search the files or directories names with starting letter “l”. here l is variable.
+7)	sort filename  it will display the content of the file in an alphabetic order.
+8)	sort -r filename it will display the content of the file in reverse alphabetic order.
+9)	Pwd      present working directory
+10)	mkdir <directory name>  to create a directory (directory means a folder)
+11)	mkdir -p temp1/temp2/<directory name> this is used to create a directory inside a directory.
+12)	touch <file name>  this is used to create a file.
+13)	touch <file1><file2>  this is used to create multiple files.
+14)	Clear     this is used to clear all the data on the command prompt.
+15)	cd    change directory.
+16)	cd .. used to come out of the present directory.
+17)	cat <file name> used to display the content of the file.
+18)	Cpfile_namedestination_path
+19)	cp file1 file2 this is used to copy the content from file 1 to file2. If file2 is not available. then it will create a file2 and writes in that file. If file2 is present, then it overwrites in that file.
+20)	cp -r dir1 dir2  this is used to copy the content of directory1 to directory2.
+21)	cp -p file1 dir2/dir3/dir4/file1  this is used to copy file1 content to desire path with same permissions.
+22)	cp -i file1 file2 this is used to copy file1 content to file2 with interactive mode that means it will ask before copying can it overwrite depending on the user input it will overwrite.
+23)	mv this is used to rename files and directories and also act as cut and paste.
+24)	mv file1 file2 this used to change the files name and cut the content and paste in a new file. Here file1 content is moved to file2 and the file1 is deleted.
+25)	mv dir1 dir2  this is used to change the directory name and cut the content and paste in a new directory.
+26)	Echo this is used to print the statement on the command line editor.
+27)	echo -e    this is used to print the statement in different line. 
+Ex: echo -e “hi \nhow r u”
+Hi
+How r u
+28)	wc<file name> this is used to count the no of lines, words and characters in that file.
+29)	wc-l<file name> this is used to count the no of lines in the file.
+30)	wc-w<file name> this is used to count no of words in that file.
+31)	 wc-c<file name> this is used to count no of characters in that file.
+32)	rm<file name> this is used to remove or delete the files.
+33)	rm -r<directory name> this is used to remove or delete the directory.
+34)	diff  this is used to find the difference between two files Ex: diff file1 file
+35)	head command used display top lines in a file
+36)	head -10 <file name> this is used to display of the first 10 lines.
+37)	tail command used to display bottom lines in a file
+38)	tail -10 <file name>this is used to display content of last 10 lines.
+39)	grepthis is used to search pattern in a file.
+40)	grep -i “pattern” <file name> this command will search a pattern in a file, and it is case insensitive.
+41)	grep -i -n “pattern” <file name> this command will search and display with the line no that particular pattern is present in
+42)	grep -i -c “pattern” <file name> this command is used to count the no of times the pattern present in it.
+43)	grep -i -w “pattern” <file name> this command will display the particular pattern present line.
+44)	grep -i -l “pattern” * this command is used to list the file name in which the pattern is present in.
+45)	grep -i -l -R “pattern” * this is used to list all the file present in the system with that particular pattern.
+46)	grep -e “pattern” -e “pattern2” <file name>this command is used to search multiple patterns at a time
+47)	sed [stream editor]it is used to replace pattern in a file and print the particular line on the command line prompt.
+48)	sed ‘s/pattern/change pattern/g’ filename  this is used to change the pattern from one pattern to another, but it will not change in the file it will show in the screen or command line prompt.
+49)	sed ‘-i s/pattern/change pattern/g’ filename this is used to change the pattern in a particular file (it will not display on the screen)
+50)	sed -n ‘3p’ filename this is used to print only third line content of the file while displaying on the command line prompt.
+51)	sed -n ‘3,6p’filename  this is used to print only third to sixth lines of the file while displaying on the command line prompt.
+52)	more<file name> this is used to display the content of the file in page wise we can only scroll down.
+53)	less<file name> this is used to display the content of the file in page wise we can scroll up and down.
+54)	vi<file name> used to edit a file on vi editor. 
+i)	I    is used to insert the data in vi editor.
+ii)	Esc button  ”:wq!” quits by saving the data
+iii)	 Esc button   “:q!”    quits by not saving the data.
+iv)	:set nu or :set number    is used set the numbers in the file
+55)	find  this is used to find the location of a file.
+56)	find . -name “test1”  it will search the test1 file recursively 
+57)	find . -iname “test1”  this is used for case insensitively
+58)	find /home/path -iname “test1”  it will search test1 file weather it is present in /home/path in directory.
+59)	find . -type f -mtime +10 this is used to find the files modified ten days before (f-file)
+60)	find . -type d -mtime +10 to find the directories modified ten days before. (d-directory)
+61)	find . -type f -mtime -10  this is used to find the files modified during ten days
+62)	find . -type d -mtime -10this is used to find the directories modified during ten days.
+63)	find . -type f -mmin  +10/-10  this is used for find the files modified ten minutes before/ during ten mins
+64)	find . -type d -mmin +10/-10  this is used to find the directories modified 10 mins before / during ten mins.
+65)	find . -type f -prem 0777 this is used to find the files with full permission
+66)	find . -type d -prem 0777this is used to find the directories with full permission
+67)	find . -type f -empty  this is used to find all empty files
+68)	find . -type f -not -empty this is used to find all non-empty files. 
+69)	find . -maxdepth 1 -type f -iname “filename”  it is used to restrict find command only in the path
+70)	find . -maxdepth 2 -type f -iname “filename”  is is used to restrict to find command in two paths
+71)	xargs this is used to pass the output of a particular command to the next command as an argument.
+72)	find . -type f -mtime +9|xargs rm -rffiles or directories created 9 days before as an arguments to remove.
+73)	chmod [change mode]  this is used to change the permissions of file and directory. 
+                 Format for file and directory
+Owner	Group	Others
+R               w              x	R              w             x	R                w             x
+1                1               1   	1               1              1   	1                  1             1
+4                 2               1 	4               2              1	4                  2             1
+
+74)	chmod 777 <file name >it will change the permissions of the file with read, write and execute access for all owner, group and others.
+Ex: chmod 541<file name> this will provide read and execute for owner, write for group and execute for others
+75)	chmod -R 777 <directory> it will change permissions for all the files and directories present in that directory including that directory.
+76)	chmod 777 <file1><file2> this is used for changing multiple files at a time.
+77)	umask it is used to set default permissions for files and directories on the system.
+78)	umask 000  after running this command whoever creates any file and directories on the system will have full permissions.
+79)	umask 777  after running this command whoever creates any file and directories on the system will have no permissions.
+80)	chown<new name> file  it is used to change the ownership of a file with new name.
+81)	chown newname:group file it is used to change the ownership of a file with new group
+82)	> [redirect] this is used to write the output of command to a file. If the file doesn’t exist, then it creates a file and writes in that and if the file presents then overwrites in that file
+83)	>>[append]    this is used to attach the output to the end of the file. This will not overwrite.
+84)	du <file name> this is used to check the size of files and directories.
+85)	du -sh<file name> this is used to check the size of file and directories in human readable format.
+86)	du -sh*   this is used to check the size of the present working path.
+87)	| {pipe}  this used to give output of one command as input to the next command.
+Ex: ls -lrt|wc -1
+Output of long reversable file and directory will be given as input to the word count command and it will display the no of lines present in it.
+88)	df -h .it will show the size of the present drive in the system.
+89)	free -b or free -g  it is used to check the ram size.
+90)	cut  this is used to cut a file in column wise to print on the command line prompt.
+91)	cut -d “ ” -f1 filename  this command is used to cut first column field in a file. Here d is an delimiter. Example column is separated by space or :
+92)	cut -d “ ” -f1,3 filename this command is used to the first and third column to print on the screen
+93)	awk it is also used as a function like cut but in cut command the delimiter have single space, and some may have multiple space, to overcome with this problem we can use awk
+94)	awk -F “ ” ‘{print $1}’ filename  this is used to print the first column of a field in a file.
+95)	awk -F “ ” ‘{print $2}’ filename  this is used to print the second column of the field in a file
+96)	awk -F “ ” ‘{print $Nf}’ filename  this is used to print the last column of the field in a file
+97)	awk -F “ ” ‘{print$(Nf-1) }’ filename  this is used to print the last but one column of the field in a file
+98)	awk -F “ ” ‘{print $1,$3}’ filename 
